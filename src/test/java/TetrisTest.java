@@ -1,12 +1,15 @@
-package org.psnbtech;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.Assert.*;
-
+//import java.time.Clock;
 import java.util.Random;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import psnbtech.BoardPanel;
+import psnbtech.Tetris;
+import psnbtech.TileType;
 
 public class TetrisTest {
 
@@ -22,7 +25,7 @@ public class TetrisTest {
 		testris.isNewGame = true;
 		testris.random = new Random();
 		testris.gameSpeed = 1.0f;
-		testris.logicTimer = new Clock(1.0f);
+//		testris.logicTimer = new Clock(1.0f);
 	}
 
 	@After

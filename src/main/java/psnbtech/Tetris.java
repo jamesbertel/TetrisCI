@@ -1,4 +1,4 @@
-package org.psnbtech;
+package psnbtech;
 
 import java.awt.BorderLayout;
 import java.awt.event.KeyAdapter;
@@ -33,7 +33,7 @@ public class Tetris extends JFrame {
 	/**
 	 * The BoardPanel instance.
 	 */
-	BoardPanel board;
+	public BoardPanel board;
 	
 	/**
 	 * The SidePanel instance.
@@ -49,7 +49,7 @@ public class Tetris extends JFrame {
 	 * Whether or not we've played a game yet. This is set to true
 	 * initially and then set to false when the game starts.
 	 */
-	boolean isNewGame;
+	public boolean isNewGame;
 	
 	/**
 	 * Whether or not the game is over.
@@ -70,12 +70,12 @@ public class Tetris extends JFrame {
 	 * The random number generator. This is used to
 	 * spit out pieces randomly.
 	 */
-	Random random;
+	public Random random;
 	
 	/**
 	 * The clock that handles the update logic.
 	 */
-	Clock logicTimer;
+	public Clock logicTimer;
 				
 	/**
 	 * The current type of tile.
@@ -111,13 +111,13 @@ public class Tetris extends JFrame {
 	/**
 	 * The speed of the game.
 	 */
-	float gameSpeed;
+	public float gameSpeed;
 		
 	/**
 	 * Creates a new Tetris instance. Sets up the window's properties,
 	 * and adds a controller listener.
 	 */
-	Tetris() {
+	public Tetris() {
 		/*
 		 * Set the basic properties of the window.
 		 */
@@ -319,7 +319,7 @@ public class Tetris extends JFrame {
 	/**
 	 * Updates the game and handles the bulk of it's logic.
 	 */
-	void updateGame() {
+	public void updateGame() {
 		/*
 		 * Check to see if the piece's position can move down to the next row.
 		 */
@@ -383,7 +383,7 @@ public class Tetris extends JFrame {
 	 * Resets the game variables to their default values at the start
 	 * of a new game.
 	 */
-	void resetGame() {
+	public void resetGame() {
 		this.level = 1;
 		this.score = 0;
 		this.gameSpeed = 1.0f;
