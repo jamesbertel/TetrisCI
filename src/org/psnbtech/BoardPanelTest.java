@@ -1,39 +1,42 @@
 package org.psnbtech;
 
 import static org.junit.Assert.*;
-
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class BoardPanelTest {
+	
+	BoardPanel bptest;
+	Tetris bptestris = new Tetris();
 
-	@Test
-	public void testBoardPanel() {
-		fail("Not yet implemented");
+	@Before
+	public void setUp() throws Exception {
+		bptest = new BoardPanel(bptestris);
 	}
 
-	@Test
-	public void testClear() {
-		fail("Not yet implemented");
+	@After
+	public void tearDown() throws Exception {
+		bptest = null;
 	}
 
 	@Test
 	public void testIsValidAndEmpty() {
-		fail("Not yet implemented");
+		TileType tile = TileType.TypeJ;
+		bptest = new BoardPanel(bptestris);
+		assertEquals(true, bptest.isValidAndEmpty(tile, 4, 6, 0));
 	}
 
 	@Test
 	public void testAddPiece() {
-		fail("Not yet implemented");
+		TileType tile = TileType.TypeS;
+		bptest = new BoardPanel(bptestris);
+		bptest.addPiece(tile, 2, 9, 1);
+		assertEquals(false, bptest.isValidAndEmpty(tile, 2, 9, 1));
 	}
 
 	@Test
 	public void testCheckLines() {
-		fail("Not yet implemented");
+		assertEquals(22, bptest.checkLines());
 	}
-
-	@Test
-	public void testPaintComponentGraphics() {
-		fail("Not yet implemented");
-	}
-
 }
