@@ -1,6 +1,5 @@
 import static org.junit.Assert.assertEquals;
 
-//import java.time.Clock;
 import java.util.Random;
 
 import org.junit.After;
@@ -10,6 +9,7 @@ import org.junit.Test;
 import psnbtech.BoardPanel;
 import psnbtech.Tetris;
 import psnbtech.TileType;
+import psnbtech.Clock;
 
 public class TetrisTest {
 
@@ -25,7 +25,7 @@ public class TetrisTest {
 		testris.isNewGame = true;
 		testris.random = new Random();
 		testris.gameSpeed = 1.0f;
-//		testris.logicTimer = new Clock(1.0f);
+		testris.logicTimer = new Clock(1.0f);
 	}
 
 	@After
