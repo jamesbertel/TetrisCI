@@ -1,12 +1,15 @@
-package org.psnbtech;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Random;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import psnbtech.BoardPanel;
+import psnbtech.Tetris;
+import psnbtech.TileType;
+import psnbtech.Clock;
 
 public class TetrisTest {
 
