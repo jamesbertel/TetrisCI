@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Random;
-
+We are making a new change!
 import javax.swing.JFrame;
 
 /**
